@@ -21,12 +21,12 @@ const PageHeader = ({
       <View className="m-0 flex w-full flex-col items-center gap-6 md:w-auto md:flex-row">
         <View>{title}</View>
       </View>
-      <View className="flex w-full items-center gap-3">
+      <View className="flex w-full items-center gap-3 md:w-auto">
         {isError && <ErrorMessage />}
-        <Button onClick={refetch} className="flex w-full flex-row items-center justify-center">
-          <View>
-            <Text className="text-white">Обновить </Text>
-          </View>
+        <Button
+          onClick={refetch}
+          className="flex w-full flex-row items-center justify-center text-center md:w-auto">
+          <Text className="text-white">Обновить </Text>
           <Spinner className={isLoading ? 'animate-spin' : ''} />
         </Button>
       </View>
